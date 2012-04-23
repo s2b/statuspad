@@ -5,3 +5,49 @@
 .widget-datetime-time {
 	float: right;
 }
+
+.widget-datetime-analog {
+	width: 48px;
+	height: 48px;
+	outline: 1px solid red;
+	position: relative;
+}
+.widget-datetime-hours {
+	width: 2px;
+	height: 16px;
+	position: absolute;
+	top: 8px;
+	left: 50%;
+	margin-left: -1px;
+	-webkit-transform-origin: 1px 16px;
+	-webkit-transform: rotate(0deg);
+	
+	background: blue;
+}
+.widget-datetime-minutes {
+	width: 2px;
+	height: 24px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -1px;
+	-webkit-transform-origin: 1px 24px;
+	-webkit-transform: rotate(0deg);
+	
+	background: green;
+}
+.widget-datetime-seconds {
+	width: 1px;
+	height: 24px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transition: -webkit-transform 5s linear 0s;
+	
+	-webkit-transform-origin: 1px 24px;
+	-webkit-transform: rotate(0deg);
+	
+	
+	
+	background: yellow;
+}
