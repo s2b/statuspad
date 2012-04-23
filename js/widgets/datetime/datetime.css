@@ -1,3 +1,8 @@
+.widget-datetime {
+	position: relative;
+	height: 76px;
+}
+
 .widget-datetime-date {
 	float: left;
 }
@@ -7,47 +12,59 @@
 }
 
 .widget-datetime-analog {
-	width: 48px;
-	height: 48px;
-	outline: 1px solid red;
-	position: relative;
+	width: 64px;
+	height: 64px;
+	margin: auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -39px;
+	padding: 5px;
+	border: 1px solid red;
+	border-radius: 50%;
+	overflow: hidden;
 }
 .widget-datetime-hours {
 	width: 2px;
-	height: 16px;
+	height: 24px;
 	position: absolute;
-	top: 8px;
+	top: 50%;
 	left: 50%;
+	margin-top: -24px;
 	margin-left: -1px;
-	-webkit-transform-origin: 1px 16px;
+	-webkit-transform-origin: 1px 24px;
 	-webkit-transform: rotate(0deg);
 	
 	background: blue;
+	border-radius: 50%;
 }
 .widget-datetime-minutes {
 	width: 2px;
-	height: 24px;
+	height: 32px;
 	position: absolute;
-	top: 0;
+	top: 50%;
 	left: 50%;
+	margin-top: -32px;
 	margin-left: -1px;
-	-webkit-transform-origin: 1px 24px;
+	-webkit-transform-origin: 1px 32px;
 	-webkit-transform: rotate(0deg);
 	
 	background: green;
+	border-radius: 50%;
 }
 .widget-datetime-seconds {
 	width: 1px;
-	height: 24px;
+	height: 32px;
 	position: absolute;
-	top: 0;
+	top: 50%;
 	left: 50%;
+	margin-top: -32px;
 	-webkit-transition: -webkit-transform 5s linear 0s;
 	
-	-webkit-transform-origin: 1px 24px;
+	-webkit-transform-origin: 1px 32px;
 	-webkit-transform: rotate(0deg);
 	
 	
 	
 	background: yellow;
+	border-radius: 50%;
 }
