@@ -1,7 +1,10 @@
 define(["text!./datetime.html", "moment"], function (html) {
-	var date, time, hours, minutes, seconds;
+	var date, time, hours, minutes, seconds, counter;
 	
 	function refresh() {
+		if (counter >= 3600) {
+			init();
+		}
 		var now = moment(),
 			data = {
 				date:		now.format('ddd, D. MMMM YYYY'),
@@ -12,6 +15,8 @@ define(["text!./datetime.html", "moment"], function (html) {
 			};
 		date.text(data.date);
 		time.text(data.time);
+		
+		counter++;
 		
 		return 0;
 	}
@@ -25,6 +30,9 @@ define(["text!./datetime.html", "moment"], function (html) {
 				minutes:	now.format('m'),
 				seconds:	now.format('s')
 			};
+		
+		counter = 0;
+		
 		data.hourDeg = getHourDeg(data.hours, data.minutes);
 		data.minuteDeg = getMinuteDeg(data.minutes);
 		data.secondDeg = getSecondDeg(data.seconds);
@@ -50,6 +58,20 @@ define(["text!./datetime.html", "moment"], function (html) {
 			.on('webkitTransitionEnd', function() {
 				seconds.css('-webkit-transition', '-webkit-transform 0s linear 0s');
 				setTimeout(function() {
+					now = moment(),
+					data = {
+						hours:		now.format('h'),
+						minutes:	now.format('m'),
+						seconds:	now.format('s')
+					};
+					data.hourDeg = getHourDeg(data.hours, data.minutes);
+					data.minuteDeg = getMinuteDeg(data.minutes);
+					data.secondDeg = getSecondDeg(data.seconds);
+					
+					console.log(data.secondDeg);
+					
+					hours.css('-webkit-transform', 'rotate(' + data.hourDeg + 'deg)');
+					minutes.css('-webkit-transform', 'rotate(' + data.minuteDeg + 'deg)');
 					seconds.css('-webkit-transform', 'rotate(0deg)');
 					
 					setTimeout(function() {
@@ -57,19 +79,6 @@ define(["text!./datetime.html", "moment"], function (html) {
 						
 						setTimeout(function() {
 							seconds.css('-webkit-transform', 'rotate(360deg)');
-							
-							now = moment(),
-							data = {
-								hours:		now.format('h'),
-								minutes:	now.format('m'),
-								seconds:	now.format('s')
-							};
-							data.hourDeg = getHourDeg(data.hours, data.minutes);
-							data.minuteDeg = getMinuteDeg(data.minutes);
-							data.secondDeg = getSecondDeg(data.seconds);
-							
-							hours.css('-webkit-transform', 'rotate(' + data.hourDeg + 'deg)');
-							minutes.css('-webkit-transform', 'rotate(' + data.minuteDeg + 'deg)');
 						}, 0);
 					}, 0);
 				}, 0);
