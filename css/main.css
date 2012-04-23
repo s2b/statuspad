@@ -1,0 +1,44 @@
+body {
+	background: url(images/carbon_fibre.png);
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #FFF;
+	width: 600px;
+	height: 1024px;
+	margin: auto;
+}
+
+.l {
+	float: left;
+}
+
+.r {
+	float: right;
+}
+
+.widget {
+	border-radius: 1em;
+	padding: 1em;
+	margin: 1em;
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.6) rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.3);
+
+	background-color: #218bcc;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(33, 139, 204)), to(rgb(90, 180, 226)));
+	background-image: -webkit-linear-gradient(top, rgb(33, 139, 204), rgb(90, 180, 226));
+	background-image: -moz-linear-gradient(top, rgb(33, 139, 204), rgb(90, 180, 226));
+	background-image: -o-linear-gradient(top, rgb(33, 139, 204), rgb(90, 180, 226));
+	background-image: -ms-linear-gradient(top, rgb(33, 139, 204), rgb(90, 180, 226));
+	background-image: linear-gradient(top, rgb(33, 139, 204), rgb(90, 180, 226));
+
+/*
+-webkit-box-shadow: inset 0px 2px 5px 1px rgba(0, 0, 0, 0.6);
+-moz-box-shadow: inset 0px 2px 5px 1px rgba(0, 0, 0, 0.6);
+box-shadow: inset 0px 2px 5px 1px rgba(0, 0, 0, 0.6);
+*/
+}
+
+.widget:after, .cf:after {
+	content: '';
+	display: block;
+	clear: both;
+}
