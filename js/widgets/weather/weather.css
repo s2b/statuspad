@@ -1,0 +1,46 @@
+.widget-weather-today {
+	float: left;
+	width: 50%;
+}
+
+.widget-weather-tomorrow {
+	margin-left: 50%;
+}
+
+.widget-weather-today:before, .widget-weather-tomorrow:before {
+	content: "";
+	height: 64px;
+	width: 64px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+	background-size: 64px 64px;
+}
+
+.widget-weather-cloudy:before {
+	background-image: url(images/cloudy.svg);
+}
+
+.widget-weather-sunny:before {
+	background-image: url(images/sunny.svg);
+}
+
+.widget-weather-cloudy-sunny:before {
+	background-image: url(images/cloudy-sunny.svg);
+}
+
+.widget-weather-hail:before {
+	background-image: url(images/hail.svg);
+}
+
+.widget-weather-rain:before {
+	background-image: url(images/rain.svg);
+}
+
+.widget-weather-snow:before {
+	background-image: url(images/snow.svg);
+}
+
+.widget-weather-storm {
+	background-image: url(images/storm.svg);
+}
