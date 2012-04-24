@@ -2,7 +2,7 @@ define(["text!./datetime.html", "moment"], function (html) {
 	var date, time, hours, minutes, seconds, counter;
 	
 	function refresh() {
-		if (counter >= 3600) {
+		if (counter >= 300) {
 			init();
 		}
 		var now = moment(),
