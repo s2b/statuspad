@@ -68,8 +68,6 @@ define(["text!./datetime.html", "moment"], function (html) {
 					data.minuteDeg = getMinuteDeg(data.minutes);
 					data.secondDeg = getSecondDeg(data.seconds);
 					
-					console.log(data.secondDeg);
-					
 					hours.css('-webkit-transform', 'rotate(' + data.hourDeg + 'deg)');
 					minutes.css('-webkit-transform', 'rotate(' + data.minuteDeg + 'deg)');
 					seconds.css('-webkit-transform', 'rotate(0deg)');
