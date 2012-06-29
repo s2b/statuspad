@@ -106,7 +106,7 @@ define(function () {
 				var html = '';
 				cssFiles.forEach(function (file) {
 					html += '<link rel="stylesheet" href="' + file + '" />';
-				})
+				});
 				$("head").append(html);
 
 				// Start queue
